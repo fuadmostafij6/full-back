@@ -1,0 +1,21 @@
+
+  #menu20{
+    position: fixed !important;
+    top: 15% !important;
+    right: 0 !important;
+    z-index: 10 !important;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  #menu20 ul{
+    list-style: none
+  }
+  #menu20 ul li{
+    padding: 5px 8px;
+    background-color: black;
+    color: white;
+  }
+  .color{
+    color: white;
+  }
+  

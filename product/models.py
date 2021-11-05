@@ -1,4 +1,5 @@
 from django.db import models
+from app_auth.models import Profile
 
 # Create your models here.
 
@@ -16,15 +17,30 @@ class Product(models.Model):
     title = models.CharField(max_length=200)
     date = models.DateField(auto_now_add=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, blank=True, null=True)
-    image = models.ImageField(upload_to="products/")
-    marcket_price = models.PositiveIntegerField()
-    selling_price = models.PositiveIntegerField()
-    description = models.TextField()
+    image = models.ImageField(upload_to="products/", null=True, blank=True)
+    marcket_price = models.PositiveIntegerField(blank=True, null=True)
+    trend = models.BooleanField(default=False, blank=True, null=True)
+    selling_price = models.PositiveIntegerField(null=True, blank=True)
+    description = models.TextField(null=True, blank=True)
+    origin = models.CharField(max_length=200, null=True, blank=True)
+    pattern_type = models.CharField(max_length=200, null=True, blank=True)
+    closure_type = models.CharField(max_length=200,null=True, blank=True)
+    material = models.CharField(max_length=200, null=True, blank=True)
+    style = models.CharField(max_length=200, null=True, blank=True)
+    item_type = models.CharField(max_length=200, null=True, blank=True)
+    thikness = models.CharField(max_length=200, null=True, blank=True)
+    size = models.CharField(max_length=200, null=True, blank=True)
+    slug = models.TextField(max_length=100, unique=True, null=True, blank=True)
 
     def __str__(self):
-        return self.title
+        return f"{self.title} || {self.trend} {self.id}"
 
 
+class ProductReview(models.Model):
+    prouser = models.ForeignKey(Profile, on_delete=models.SET_NULL,blank=True, null=True)
+    product = models.ForeignKey(Product,  on_delete=models.SET_NULL,blank=True, null=True, related_name='product')
+    review = models.FloatField()
+    review_text = models.TextField()
 # class Cart(models.Model):
 #     customer = models.ForeignKey(Profile, on_delete=models.CASCADE)
 #     total = models.PositiveIntegerField()

@@ -1,0 +1,241 @@
+/* .overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+  top: 0;
+  left: 0;
+    
+    transition: all .3s ease-in-out;
+  } */
+  /* .cross-btn{
+    width: 5%;
+  }
+  .cross-btn .fa-times-circle{
+    font-size: 20px !important;
+    cursor: pointer;
+  } */
+  .cross-btn .fa-times-circle:hover{
+    color: rgb(218, 0, 0) !important;
+  }
+  .login-popup{
+      width: 100%;
+     top: 8%;
+     left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    position: fixed;
+    z-index: 10;
+    /* background-color: rgba(202, 202, 202, 0.7); */
+    /* display: none; */
+    padding: 10px;
+    
+    transition: all .3s ease-in-out;
+  }
+  
+  .login-popup.from-top{
+    transform: translateY(0%);
+  }
+  
+ .login-popup .for-centering{
+    width: 50%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .login-popup .main-card{
+    width: 100%;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0px 2px 12px -2px rgba(0,0,0,0.48);
+      -webkit-box-shadow: 0px 2px 12px -2px rgba(0,0,0,0.48);
+      -moz-box-shadow: 0px 2px 12px -2px rgba(0,0,0,0.48);
+  }
+  .login-title h1{
+      font-size: 45px;
+      margin-bottom: 0px;
+  }
+  .login-title p{
+      font-size: 15px;
+      margin-bottom: 0px;
+      font-weight: 600;
+  }
+  .reg-button{
+      margin-top: 30px;
+  }
+  .with-facebook{
+      background-color: #3B5998;
+      border: none;
+      font-weight: 500;
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 20px;
+      font-size: 10px;
+      margin-right: 10px;
+      transition: all .2s ease-in-out;
+  }
+  .with-facebook:hover{
+      background-color: #4466af;
+  }
+  .with-facebook i{
+      background-color: #fff;
+      color: #3B5998;
+      padding: 5px;
+      font-size: 15px;
+      margin-right: 5px;
+      font-size: 10px;
+  }
+  .with-google{
+      background-color: #DB4437;
+      border: none;
+      font-weight: 500;
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 20px;
+      font-size: 10px;
+      transition: all .2s ease-in-out;
+  }
+  .with-google:hover{
+      background-color: #e7584b;
+  }
+  .with-google i{
+      background-color: #fff;
+      color: #DB4437;
+      padding: 5px;
+      font-size: 15px;
+      margin-right: 5px;
+      font-size: 10px;
+  
+  }
+  .another-reg{
+      margin-top: 20px;
+  }
+  .another-reg p{
+      margin-bottom: 0px;
+  }
+  .login-popup .for-input{
+      display: flex;
+      flex-direction: column;
+      margin-top: 8px;
+      margin: 0 auto;
+  }
+  .login-popup .for-input input{
+      outline: none;
+      margin-bottom: 20px;
+      padding: 12px 8px;
+      border-radius: 20px;
+      width: 100%;
+      border: 2px solid rgb(201, 201, 201);
+      transition: all .3s ease-in-out;
+
+  }
+ .login-popup .for-input input:focus{
+      border: 2px solid #E27C39;
+  }
+  .condition, .terms{
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      font-weight: 500;
+  }
+  .condition i, .terms input{
+      width: 8%;
+      text-align: center;
+  }
+  .condition p, .terms p{
+      margin-bottom: 0px;	
+     
+  }
+  .already-user{
+      font-weight: 500;
+      margin-left: 48px;
+  }
+  .already-user p a{
+      text-decoration: none;
+  }
+  .login-here {
+      width: 100%;
+      text-align: center;
+      margin: 10px 0px;
+  }
+  .login-here button{
+      width: 90%;
+      margin: 0 auto;
+      padding: 8px;
+      border: none;
+      color: #fff;
+      font-weight: 500;
+      font-style: italic;
+      font-size: 18px;
+      border-radius: 20px;
+      background-color: #E27C39;
+  
+  }
+  .registering p{
+      font-weight: 500;
+      font-size: 15px;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+      .for-centering{
+      width: 70%;
+    }
+    
+  }
+  @media screen and (max-width: 560px) {
+    .for-centering{
+      width: 80%;
+    }
+      .login-title h1{
+      font-size: 30px;
+    }
+    .login-title p{
+      font-size: 10px;
+    }
+    .reg-button{
+      display: flex;
+      justify-content: space-between;
+    }
+    .another-reg p{
+      font-size: 10px;
+    }
+    .for-input input{
+      padding: 5px 12px;
+    }
+    .condition p{
+      font-size: 12px;
+    }
+    .terms p{
+      font-size: 12px;
+    }
+    .already-user p{
+      font-size: 12px;
+  
+    }
+    .login-here button{
+      padding: 5px;
+    }
+    .registering p {
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: 455px) {
+      .for-centering{
+      width: 100%;
+    }
+    
+  }
+  @media screen and (max-width: 370px) {
+      .with-google, .with-facebook{
+      padding: 10px 15px;
+    }
+    
+  }
